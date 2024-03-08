@@ -164,6 +164,10 @@ footer {
     transition: all 0.5s;
   }
 
+
+  .acerca-de > p , h2{
+    text-align: center;
+  }
   .activities-item {
     width: 300px;
     margin: 2em;
