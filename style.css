@@ -36,11 +36,11 @@ header a i {
   padding: 10px;
 }
 
-#check{
+#check {
   display: none;
 }
 
-.checkbtn{
+.checkbtn {
   font-size: 25px;
   color: white;
   float: right;
@@ -51,27 +51,61 @@ header a i {
   display: none;
 }
 
-.seccion-1 {
-  background-color: hsl(49, 69%, 79%);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 4em;
+.seccion-1{
+  background: linear-gradient(hsl(49, 71%, 49%), 80% , white);
 }
 
+.container-general{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4em 4em 1em 4em;
+  flex-wrap: wrap;
+}
+
+
 .acerca-de {
-  
   width: 500px;
   padding: 1.5em;
   text-align: end;
 }
+
+.btn-descarga {
+  width: 50%;
+  border-radius: 25px;
+  background-color: hsla(0, 89%, 45%, 0.356);
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.botones{
+  display: flex;
+}
+
+.btn-descarga:hover {
+  background-color: hsla(231, 86%, 54%, 0.356);
+  color: white;
+}
+
 .seccion-2 > img {
   width: 100%;
   height: 500px;
 }
 
-footer {
+.pie-pagina {
   background-color: rgb(112, 103, 103);
   padding: 1em;
   text-align: center;
@@ -92,7 +126,7 @@ footer {
   padding: 0.3em;
 }
 
-.seccion-3 > h2{
+.seccion-3 > h2 {
   margin: 0.5em;
   text-align: center;
   font-size: 3.5em;
@@ -123,80 +157,110 @@ footer {
   justify-content: center;
 }
 
-.descripcion{
+.descripcion {
   font-family: "Anta", sans-serif;
   font-weight: 400;
   font-style: normal;
   text-align: center;
   padding: 1em;
+  height: 170px;
+  overflow: hidden;
 }
 
-.link > a{
+.link > a {
   font-weight: bold;
   font-size: 1.5em;
   color: hsl(48, 92%, 42%);
 }
 
-.link > a:hover{
+.link > a:hover {
   color: hsla(34, 83%, 39%, 0.993);
   cursor: pointer;
 }
 
-
-@media (max-width: 768px){
-
-  .seccion-1{
+@media (max-width: 768px) {
+  .seccion-1 {
     padding: 3em;
   }
-  .checkbtn{
+  .checkbtn {
     display: block;
   }
 
-  nav ul {
-    position: fixed;
+  .navbar {
+    height: 0vh;
+    position: absolute;
+    top: 40px;
+    left: 0;
     width: 100%;
-    height: 100vh;
-    background-color: hsl(48, 92%, 42%);
+    background: #2c3e50;
     text-align: center;
 
-    top: 43px;
-    left: 100%;
     transition: all 0.5s;
+    overflow: hidden;
   }
 
-
-  .acerca-de > p , h2{
-    text-align: center;
-  }
-  .activities-item {
-    width: 300px;
-    margin: 2em;
-  }
-
-  #check:checked ~ ul {
-    left: 0%;
+  .navbar ul.menu {
+    float: none;
     display: block;
+    width: 174px;
+    margin: 0 auto;
+    opacity: 0;
+    margin-top: 20px;
+  }
+
+  .navbar ul.menu li a:hover {
+    color: #b59a61;
+  }
+  /* ACTIVE */
+  .navbar.active {
+    height: 100vh;
+  }
+
+  .navbar.active ul.menu {
+    opacity: 1;
   }
 
   nav ul li{
-    display: block;
-    margin: 50px 0;
-    line-height: 30px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  nav ul li a{
-    font-size: 20px;
-  }
 
-  #check:checked ~ .checkbtn{
-    color: hsl(48, 92%, 42%);
-  }
-
-  .seccion-3 > h2{
+  .seccion-3 > h2 {
     font-size: 2.5em;
   }
-    
+
   .activities-item > h3 {
     font-size: 2em;
+  }
+  
+  #img-personal{
+    width: 200px;
+  }
+
+  .acerca-de {
+    width: 200px;
+    padding: 1.5em;
+    text-align: center;
+  }
+
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+  }
+
+  .btn-descarga {
+    color: white;
+    font-weight: bold;
+    margin: 10px;
+  }
+
+  .botones{
+    display: flex;
+    width: 70%;
   }
 }

@@ -15,50 +15,57 @@
       href="https://fonts.googleapis.com/css2?family=Anta&display=swap"
       rel="stylesheet"
     />
-    <script src="script.js"></script>
   </head>
   <body>
     <div>
       <header>
         <a href="index.html"><i class="fa-solid fa-house"></i></a>
-        <nav>
-          <input type="checkbox" id="check" />
-          <label for="check" class="checkbtn">
-            <i class="fa-solid fa-bars"></i>
-          </label>
-          <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="#acerca">Acerca de mi</a></li>
-            <li><a href="#trabajos">Trabajos</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+        <label for="check" class="checkbtn">
+          <i class="fa-solid fa-bars"></i>
+        </label>
+        <nav class="navbar">
+          <ul class="menu">
+            <li><a class="navli" href="index.html">Inicio</a></li>
+            <li><a class="navli" href="#seccion-principal">Acerca de mí</a></li>
+            <li><a class="navli" href="#trabajos">Trabajos</a></li>
+            <li><a class="navli" href="#trabajos">Servicios</a></li>
+            <li><a class="navli" href="#contacto">Contacto</a></li>
           </ul>
-        </nav>
       </header>
       <main id="seccion-principal">
         <section class="seccion-1">
-          <div class="acerca-de">
-            <h2>Acerca de mi</h2>
-            <p class="parrafo1">
-              ¡Bienvenido a mi pagina! Aqui, aprenderas mas sobre mi.
-            </p>
-            <p class="parrafo2">
-              Saludos, soy un Analista de Sistemas apasionado por todos los
-              aspectos de la programación. Poseo un sólido bagaje tecnológico y
-              he contribuido en diversas etapas del desarrollo de aplicaciones y
-              en la optimización de software. Mi búsqueda constante de
-              oportunidades para aprender y crecer me impulsa a enfrentar nuevos
-              desafíos con entusiasmo, siempre dispuesto a aportar con mis
-              conocimientos y habilidades
-            </p>
-          </div>
-          <div>
-            <img
-              src="./img/perfil.jpg"
-              alt="imagen personal"
-              width="300px"
-              id="img-personal"
-            />
+          <div class="container-general">
+            <div class="container">
+              <div class="acerca-de">
+                <h2>Robert Sanchez Rodriguez</h2>
+                <p class="parrafo1">
+                  ¡Bienvenido a mi pagina! Aqui, aprenderas mas sobre mi.
+                </p>
+                <p class="parrafo2">
+                  Me llamo Paul, nací en Cañete y vivo en Quilmana. Me gusta
+                  todo el mundo tecnologico y cada dia adquirir nuevos
+                  conocimientos. Me encantaría aprender a programar para poder
+                  ayudar a las personas a mostrar lo que hacen
+                </p>
+              </div>
+              <div class="prueba">
+                <img
+                  src="./img/perfil.jpg"
+                  alt="imagen personal"
+                  width="300px"
+                  id="img-personal"
+                />
+              </div>
+            </div>
+            <div class="botones">
+              <button class="btn-descarga" onclick="prueba()">
+                Descargar CV
+              </button>
+
+              <button class="btn-descarga" id="redirectButton">
+                Observar CV
+              </button>
+            </div>
           </div>
         </section>
         <!-- <section class="seccion-2">
@@ -84,11 +91,13 @@
                 exercitationem cupiditate sunt illum repellat.
               </p>
 
-              <p class="link">
-                <a href="https://github.com/Paul-Sanchez-Rodriguez/fernando"
-                  >Leer mas</a
-                >
-              </p>
+              <footer>
+                <p class="link">
+                  <a href="https://github.com/Paul-Sanchez-Rodriguez/fernando"
+                    >Leer mas</a
+                  >
+                </p>
+              </footer>
             </div>
 
             <div class="activities-item">
@@ -121,7 +130,7 @@
           </div>
         </section>
       </main>
-      <footer>
+      <footer class="pie-pagina">
         <h3 class="footer">Contactos</h3>
         <ul class="contactos">
           <li class="item-contacto">Contacto</li>
@@ -131,5 +140,7 @@
         </ul>
       </footer>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
